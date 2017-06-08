@@ -79,7 +79,8 @@ You have to key in the following code to link your boost.
 ```
 sudo chown -R `whoami`:admin /usr/local/bin
 sudo chown -R `whoami`:admin /usr/local/share
-```
+```   
+P.s. : Pay attention to the path there may have some difference.
 
 ### Clone Caffe
 
@@ -148,6 +149,6 @@ export PYTHONPATH=~/caffe/python:$PYTHONPATH   (your path to caffe/ python)
 If there is nothing happened, congrats you finish the installation.
 
 ### Ref
-[https://stackoverflow.com/questions/26647412/homebrew-could-not-symlink-usr-local-bin-is-not-writable](url)    
-[https://groups.google.com/forum/#!searchin/caffe-users/cmakefiles%7Csort:relevance/caffe-users/ZejVbSP8oLU/8wizK2fjAQAJ](url)    
-[https://stackoverflow.com/questions/21151695/broken-easy-install-and-pip-after-upgrading-to-os-x-mavericks](url)
+1.[https://stackoverflow.com/questions/26647412/homebrew-could-not-symlink-usr-local-bin-is-not-writable](url)    
+2.[https://groups.google.com/forum/#!searchin/caffe-users/cmakefiles%7Csort:relevance/caffe-users/ZejVbSP8oLU/8wizK2fjAQAJ](url)    
+3.[https://stackoverflow.com/questions/21151695/broken-easy-install-and-pip-after-upgrading-to-os-x-mavericks](url)
