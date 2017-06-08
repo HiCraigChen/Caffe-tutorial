@@ -2,19 +2,26 @@
 Caffe installation and some basic tutorials 
 
 
-## Installation
-This installation focus on the CPU version caffe.
+## Installation 
+This installation focus on the CPU version caffe.   
 I ran these steps on my macOS 10.12.5 and connected the caffe with python 2.7 which is build-in mac
 
-### Brew install
-Brew is a very convenient package manager on mac.
+This installation tutorial bases on the blogs:     
+[https://blog.birkhoff.me/macos-sierra-10-12-2-build-caffe/](url)           
+[https://medium.com/technologymadeeasy/installing-caffe-on-os-x-el-capitan-the-correct-way-4ecb04ef904c](url)
 
-" Homebrew installs the stuff you need that Apple didn't" quoted from Brew's website.
+and github:     
+[https://gist.github.com/doctorpangloss/f8463bddce2a91b949639522ea1dcbe4](url)  
+[https://github.com/humphd/have-fun-with-machine-learning](url)
+
+
+### Brew install    
+Brew is a very convenient package manager on mac.     
+"Homebrew installs the stuff you need that Apple didn't" quoted from Brew's website.
 
 `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 
-### Dependency install
-
+### Dependency install      
 ```
 brew install -vd snappy leveldb gflags glog szip lmdb
 brew install hdf5 opencv
@@ -22,21 +29,15 @@ brew upgrade libpng
 brew tap homebrew/versions
 ```
 
-### Edit OpenCV installation file
-
-Key the following code in the terminal
-
-`brew edit opencv`
-
-and replace 
-
+### Edit OpenCV installation file   
+Key the following code in the terminal    
+`brew edit opencv`    
+and replace     
 ```
 args « "-DPYTHON#{py_ver}_LIBRARY=#{py_lib}/libpython2.7.#{dylib}"
 args « "-DPYTHON#{py_ver}_INCLUDE_DIR=#{py_prefix}/include/python2.7"
 ```
-
-With
-
+With    
 ```
 args « "-DPYTHON_LIBRARY=#{py_prefix}/lib/libpython2.7.dylib"
 args « "-DPYTHON_INCLUDE_DIR=#{py_prefix}/include/python2.7"
@@ -75,6 +76,8 @@ If you encounter the problem that you don't have permission to unlink or like
 
 You have to key in the following code to link your boost.
 
+ref : [https://stackoverflow.com/questions/26647412/homebrew-could-not-symlink-usr-local-bin-is-not-writable](url)
+
 ```
 sudo chown -R `whoami`:admin /usr/local/bin
 sudo chown -R `whoami`:admin /usr/local/share
@@ -93,9 +96,9 @@ cp Makefile.config.example Makefile.config
 
 ### Change the Command Line Tool (CLT) 
 
-We have to change the Command Line Tool, log in apple developer website and download Xcode Command Line Tools for 7.3. Link:
+We have to change the Command Line Tool, log in apple developer website and download Xcode Command Line Tools for 7.3. 
 
-[https://developer.apple.com/downloads/](url)
+Link: [https://developer.apple.com/downloads/](url)
 
 After installation, key in the following code to change the CLT.
 
@@ -104,7 +107,7 @@ sudo xcode-select --switch /Library/Developer/CommandLineTools
 `
 
 ### Make
-
+ref : [https://groups.google.com/forum/#!searchin/caffe-users/cmakefiles%7Csort:relevance/caffe-users/ZejVbSP8oLU/8wizK2fjAQAJ](url)
 
 ```
 cmake -DCPU_ONLY=ON
@@ -113,8 +116,8 @@ sudo -H easy_install pip
 ```
 
 
-If encounter the situation, `pkg_resources.DistributionNotFound:`
-
+If encounter the situation, `pkg_resources.DistributionNotFound:`   
+ref : [https://stackoverflow.com/questions/21151695/broken-easy-install-and-pip-after-upgrading-to-os-x-mavericks](url)
 `
 sudo python -m easy_install pip
 `
