@@ -7,12 +7,12 @@ This installation focus on the CPU version caffe.
 I ran these steps on my macOS 10.12.5 and connected the caffe with python 2.7 which is build-in mac
 
 This installation tutorial bases on the blogs:     
-[https://blog.birkhoff.me/macos-sierra-10-12-2-build-caffe/](url)           
-[https://medium.com/technologymadeeasy/installing-caffe-on-os-x-el-capitan-the-correct-way-4ecb04ef904c](url)
+https://blog.birkhoff.me/macos-sierra-10-12-2-build-caffe/            
+https://medium.com/technologymadeeasy/installing-caffe-on-os-x-el-capitan-the-correct-way-4ecb04ef904c
 
 and github:     
-[https://gist.github.com/doctorpangloss/f8463bddce2a91b949639522ea1dcbe4](url)  
-[https://github.com/humphd/have-fun-with-machine-learning](url)
+https://gist.github.com/doctorpangloss/f8463bddce2a91b949639522ea1dcbe4 
+https://github.com/humphd/have-fun-with-machine-learning  
 
 
 ## Brew install    
@@ -157,7 +157,7 @@ scripts/download_model_binary.py models/bvlc_reference_caffenet
 ```
 
 ## Ref
-1.[https://stackoverflow.com/questions/26647412/homebrew-could-not-symlink-usr-local-bin-is-not-writable](url)    
-2.[https://groups.google.com/forum/#!searchin/caffe-users/cmakefiles%7Csort:relevance/caffe-users/ZejVbSP8oLU/8wizK2fjAQAJ](url)    
-3.[https://stackoverflow.com/questions/21151695/broken-easy-install-and-pip-after-upgrading-to-os-x-mavericks](url)
-4.[https://github.com/BVLC/caffe/issues/4142](url)
+1.https://stackoverflow.com/questions/26647412/homebrew-could-not-symlink-usr-local-bin-is-not-writable     
+2.https://groups.google.com/forum/#!searchin/caffe-users/cmakefiles%7Csort:relevance/caffe-users/ZejVbSP8oLU/8wizK2fjAQAJ     
+3.https://stackoverflow.com/questions/21151695/broken-easy-install-and-pip-after-upgrading-to-os-x-mavericks  
+4.https://github.com/BVLC/caffe/issues/4142 
