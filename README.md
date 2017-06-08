@@ -74,9 +74,7 @@ If you encounter the problem that you don't have permission to unlink or like
 
 `Homebrew: Could not symlink, /usr/local/bin is not writable`
 
-You have to key in the following code to link your boost.
-
-ref : [https://stackoverflow.com/questions/26647412/homebrew-could-not-symlink-usr-local-bin-is-not-writable](url)
+You have to key in the following code to link your boost.   
 
 ```
 sudo chown -R `whoami`:admin /usr/local/bin
@@ -106,9 +104,7 @@ After installation, key in the following code to change the CLT.
 sudo xcode-select --switch /Library/Developer/CommandLineTools
 `
 
-### Make
-ref : [https://groups.google.com/forum/#!searchin/caffe-users/cmakefiles%7Csort:relevance/caffe-users/ZejVbSP8oLU/8wizK2fjAQAJ](url)
-
+### Make    
 ```
 cmake -DCPU_ONLY=ON
 make -j8 all
@@ -116,8 +112,7 @@ sudo -H easy_install pip
 ```
 
 
-If encounter the situation, `pkg_resources.DistributionNotFound:`   
-ref : [https://stackoverflow.com/questions/21151695/broken-easy-install-and-pip-after-upgrading-to-os-x-mavericks](url)
+If encounter the situation, `pkg_resources.DistributionNotFound:`     
 `
 sudo python -m easy_install pip
 `
@@ -151,3 +146,8 @@ export PYTHONPATH=~/caffe/python:$PYTHONPATH   (your path to caffe/ python)
 `python -c 'import caffe' `
 
 If there is nothing happened, congrats you finish the installation.
+
+### Ref
+[https://stackoverflow.com/questions/26647412/homebrew-could-not-symlink-usr-local-bin-is-not-writable](url)    
+[https://groups.google.com/forum/#!searchin/caffe-users/cmakefiles%7Csort:relevance/caffe-users/ZejVbSP8oLU/8wizK2fjAQAJ](url)    
+[https://stackoverflow.com/questions/21151695/broken-easy-install-and-pip-after-upgrading-to-os-x-mavericks](url)
