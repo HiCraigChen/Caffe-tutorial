@@ -134,9 +134,8 @@ find `python2` and replace it into `python`
 
 
 
-### Set Path
-Key the following line in the terminal to guide python to use the correct package path:
-
+### Set Path  
+Add the code into `vim /.bash_profile` to guide python to use the correct package path  
 `
 export PYTHONPATH=~/caffe/python:$PYTHONPATH   (your path to caffe/ python)
 `
