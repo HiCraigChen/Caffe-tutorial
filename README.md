@@ -15,13 +15,13 @@ and github:
 [https://github.com/humphd/have-fun-with-machine-learning](url)
 
 
-### Brew install    
+## Brew install    
 Brew is a very convenient package manager on mac.     
 "Homebrew installs the stuff you need that Apple didn't" quoted from Brew's website.
 
 `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 
-### Dependency install      
+## Dependency install      
 ```
 brew install -vd snappy leveldb gflags glog szip lmdb
 brew install hdf5 opencv
@@ -29,7 +29,7 @@ brew upgrade libpng
 brew tap homebrew/versions
 ```
 
-### Edit OpenCV installation file   
+## Edit OpenCV installation file   
 Key the following code in the terminal    
 `brew edit opencv`    
 and replace     
@@ -43,7 +43,7 @@ args « "-DPYTHON_LIBRARY=#{py_prefix}/lib/libpython2.7.dylib"
 args « "-DPYTHON_INCLUDE_DIR=#{py_prefix}/include/python2.7"
 ```
 
-### Install protobuf 2.6.1
+## Install protobuf 2.6.1
 
 You can choose where to install this file on your own. 
 I prefer to install my dependency at my root.
@@ -63,7 +63,7 @@ I prefer to install my dependency at my root.
 ```
 
 
-### Install dependencies
+## Install dependencies
 
 ```
 brew install --build-from-source -vd boost159 boost-python159
@@ -80,9 +80,9 @@ You have to key in the following code to link your boost.
 sudo chown -R `whoami`:admin /usr/local/bin
 sudo chown -R `whoami`:admin /usr/local/share
 ```   
-P.s. : Pay attention to the path there may have some difference.
+P.s. : Pay attention to the path. There may have some difference.
 
-### Clone Caffe
+## Clone Caffe
 
 ```
 git clone https://github.com/BVLC/caffe.git` 
@@ -93,7 +93,7 @@ cp Makefile.config.example Makefile.config
 
 
 
-### Change the Command Line Tool (CLT) 
+## Change the Command Line Tool (CLT) 
 
 We have to change the Command Line Tool, log in apple developer website and download Xcode Command Line Tools for 7.3. 
 
@@ -105,7 +105,7 @@ After installation, key in the following code to change the CLT.
 sudo xcode-select --switch /Library/Developer/CommandLineTools
 `
 
-### Make    
+## Make    
 ```
 cmake -DCPU_ONLY=ON
 make -j8 all
@@ -134,20 +134,30 @@ find `python2` and replace it into `python`
 
 
 
-### Set Path  
+## Set Path  
 Add the code into `vim ~/.bash_profile` to guide python to use the correct package path  
 
 `export PYTHONPATH=~/your/path/to/caffe/python:$PYTHONPATH`
 
 Use `source ~/.bash_profile` in the terminal to execute change.
 
-### Try it
+## Try it
 
 `python -c 'import caffe' `
 
 If there is nothing happened, congrats you finish the installation.
 
-### Ref
+
+## Install bvlc_reference_caffenet.caffemodel
+To solve the error    
+`RuntimeError: could not open file caffe/model/bvlc_reference_caffenet/bvlc_reference_caffenet.caffemodel`
+```
+cd caffe
+scripts/download_model_binary.py models/bvlc_reference_caffenet
+```
+
+## Ref
 1.[https://stackoverflow.com/questions/26647412/homebrew-could-not-symlink-usr-local-bin-is-not-writable](url)    
 2.[https://groups.google.com/forum/#!searchin/caffe-users/cmakefiles%7Csort:relevance/caffe-users/ZejVbSP8oLU/8wizK2fjAQAJ](url)    
 3.[https://stackoverflow.com/questions/21151695/broken-easy-install-and-pip-after-upgrading-to-os-x-mavericks](url)
+4.[https://github.com/BVLC/caffe/issues/4142](url)
